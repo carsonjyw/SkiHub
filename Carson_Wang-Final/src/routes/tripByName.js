@@ -21,6 +21,7 @@ export default function PlannedTrips() {
             trip.details.some(detail => detail.resortName === resortName)
         );
         setFilteredTripDetails(filtered);
+        document.title = 'Detailed Resort Trip';
     }, [tripDetails, resortName]);
 
     const openDeleteModal = (tripId, tripIndex) => {

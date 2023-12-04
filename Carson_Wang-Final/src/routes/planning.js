@@ -126,9 +126,13 @@ export default function TripForm() {
                 setResortName('');
                 setNote('');
 
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2200);
+
                 toast("You have successfully planned your trip!", {
                     position: toast.POSITION.TOP_RIGHT,
-                    autoClose: 5000,
+                    autoClose: 2000,
                     type: toast.TYPE.DEFAULT
                 });
 
@@ -137,6 +141,7 @@ export default function TripForm() {
             }
         }
     };
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -166,7 +171,7 @@ export default function TripForm() {
                     Select Resort Name:
                     <select className="form-select" aria-label="Default select example" value={resortName} onChange={(e) => setResortName(e.target.value)}>
                         <option value="" data-testid="resort-select">Select a resort</option>
-                        {resortList.map((resort, index) => (
+                        {resortList.sort((a, b) => a.Resort.localeCompare(b.Resort)).map((resort, index) => (
                             <option key={index} value={resort.Resort}>{resort.Resort}</option>
                         ))}
                     </select>
