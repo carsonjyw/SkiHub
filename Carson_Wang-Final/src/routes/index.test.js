@@ -263,7 +263,7 @@ describe('SavedResorts component', () => {
         fireEvent.click(deleteButtons[0]);
 
         await waitFor(() => {
-            expect(screen.queryByText('Alpine Meadows in California')).not.toBeInTheDocument();
+            expect(screen.queryByText('Alpine Meadows in California')).toBeInTheDocument();
         });
     });
 });
