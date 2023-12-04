@@ -12,17 +12,18 @@ export default function PlannedTrips() {
     const tripDetails = useLoaderData();
     const { resortName } = useParams();
     const navigate = useNavigate();
-    const [filteredTripDetails, setFilteredTripDetails] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedResortData, setSelectedResortData] = useState(null);
 
     useEffect(() => {
-        const filtered = tripDetails.filter(trip =>
-            trip.details.some(detail => detail.resortName === resortName)
-        );
-        setFilteredTripDetails(filtered);
         document.title = 'Detailed Resort Trip';
-    }, [tripDetails, resortName]);
+    }, []);
+
+    const filteredTripDetails = tripDetails.map(trip => ({
+        ...trip,
+        details: trip.details.filter(detail =>
+            detail.resortName.trim().toLowerCase() === resortName.trim().toLowerCase())
+    })).filter(trip => trip.details.length > 0);
 
     const openDeleteModal = (tripId, tripIndex) => {
         setSelectedResortData({ tripId, tripIndex });
@@ -67,9 +68,9 @@ export default function PlannedTrips() {
 
     return (
         <div className='page'>
+            <h4>All trips you planned for {resortName}</h4>
             {filteredTripDetails.map((trip, index) => (
                 <div key={index}>
-                    <h4>All trips you planned for {resortName}</h4>
                     <h5>Snow Season: {trip.id_year}</h5>
                     {trip.details.sort((a, b) => new Date(a["date-start"]) - new Date(b["date-start"])).map((detail, detailIndex) => (
                         <div key={detailIndex} className='trip'>
