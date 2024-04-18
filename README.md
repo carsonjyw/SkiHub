@@ -80,5 +80,5 @@ If you have any queries regarding this project, please contact us at junyiwang.1
 
 # License
 
-This project is licensed under the GPL License - see the LICENSE.md file for details.
+This project is licensed under the GPL-2.0 License - see the LICENSE.md file for details.
 
