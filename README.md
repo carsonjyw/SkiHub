@@ -3,7 +3,6 @@
 This project is a single-page application (SPA) built using React for the frontend and JSON Server as a mock backend. It allows users to plan trips, manage reservations, and review resorts. The application features client-side routing, AJAX requests for CRUD operations, custom form validations, and reusable components.
 
 - Dataset used for db.json file: https://www.kaggle.com/datasets/alijohnson12/ikonandepicskiresorts2023 By ALI JOHNSON
-- Demo Youtube Link: https://youtu.be/PuY3Ar_krmc?si=-9DlJ3tCYPW_XNw_
 
 ## Prerequisites
 
