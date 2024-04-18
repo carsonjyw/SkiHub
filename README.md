@@ -2,6 +2,7 @@
 
 This project is a single-page application (SPA) built using React for the frontend and JSON Server as a mock backend. It allows users to plan trips, manage reservations, and review resorts. The application features client-side routing, AJAX requests for CRUD operations, custom form validations, and reusable components.
 
+- Dataset used for db.json file: https://www.kaggle.com/datasets/alijohnson12/ikonandepicskiresorts2023 By ALI JOHNSON
 - Demo Youtube Link: https://youtu.be/PuY3Ar_krmc?si=-9DlJ3tCYPW_XNw_
 
 ## Prerequisites
@@ -36,7 +37,9 @@ npm run start
 
 - **React Router**: Manages all app navigation, enabling seamless user experiences without full page reloads.
 - **Configured Routes**:
-  - **Home**: Accessible via `/`, serves as the landing page.
+  - **Home**: Accessible via `/`, serves as the landing page. User can plan a trip and search for a resort.
+  - **My Trips**: Route `/my-trips` allows users to view their planned trips.
+  - **Saved Resort**: Route `/savedResorts` allows users to view their saved ski resorts.
   - **Admin Panel**: Located at `/admin`, for administrative functions.
   - **Resort Details**: Dynamic route `/resort/:resortId` that shows details for a specific resort.
   - **Plan a Trip**: Route `/plan-trip` allows users to plan new trips.
@@ -71,3 +74,11 @@ npm run start
 - **Bookmark/Favorites System**: Enables users to bookmark or favorite resorts for quick and easy access in future sessions, mimicking a personalized experience.
 
 These features collectively enhance the functionality and user experience of the application, making it a comprehensive tool for travel planning and management.
+
+# Contact
+If you have any queries regarding this project, please contact us at junyiwang.1022@gmail.com.
+
+# License
+
+This project is licensed under the GPL License - see the LICENSE.md file for details.
+
