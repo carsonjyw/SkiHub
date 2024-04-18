@@ -20,3 +20,8 @@ Then from within this project, run the API with:
 ```bash
 npx json-server --watch db.json
 ```
+
+## Run this Project Locally
+```bash
+npm run start
+```
